@@ -1,0 +1,24 @@
+
+# Obtain an access token using your credentials
+root@localhost$ curl -X POST -d client_id=user@domain.com -d client_secret=XXXXX-XXXX-XXXXX-XXXXX-XXXXXX -d grant_type=client_credentials https://ti-api.hoplite.io/token
+{
+    "access_token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "expires_in": 3600,
+    "token_type": "Bearer",
+    "scope": "tiReadOnly"
+}
+
+# Using the access token obtained above, issue a GET to determine if the subject IP appears within the Hoplite Threat Intel database
+root@localhost$ curl -H 'Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' https://ti-api.hoplite.io/ip/128.75.222.116
+{
+    "epoch": "1479214803",
+    "firstSeen": "1479196804",
+    "lastSeen": "1479214803",
+    "threatEntity": "128.75.222.116",
+    "threatIP": "128.75.222.116",
+    "ipInt": "2152455796",
+    "threatEntityType": "ip",
+    "timesObserved": "6",
+    "threatTags": "Scanning-Bruteforce ",
+    "lastSeenTimestamp": "Tue Nov 15 5:00:03 PST 2016"
+}
