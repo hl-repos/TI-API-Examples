@@ -1,3 +1,13 @@
+##
+## curl CLI for the Hoplite Threat Intel API
+## Not fully parametereized, illustrative purposes only
+##
+## @author	acochenour@hopliteindustries.com
+## @copyright	2014-2016 Hoplite Industries, Inc.
+## @license	
+## @version	0.1
+## @since	v0.1
+##
 
 # Obtain an access token using your credentials
 root@localhost$ curl -X POST -d client_id=user@domain.com -d client_secret=XXXXX-XXXX-XXXXX-XXXXX-XXXXXX -d grant_type=client_credentials https://ti-api.hoplite.io/token
