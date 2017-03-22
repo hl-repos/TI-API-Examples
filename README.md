@@ -4,7 +4,7 @@ Working code examples in various languages for interacting with the Hoplite Thre
 
 * /ip - TI lookup for a given IP address, V4 and V6 compatible
 * /ip/subnet - TI lookup for a given IP subnet, V4-only and currently limited to /24 and smaller
-* /domain - TI lookup for a given IP address
+* /domain - TI lookup for a given Internet domain or FQDN
 * /entity - Flexible threat entity lookup (IP, domain, ASN, and file hashes)
 * /md5 - TI lookup for a given MD5 file hash
 * /sha1 - TI lookup for a given SHA1 file hash
