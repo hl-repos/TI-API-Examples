@@ -27,8 +27,6 @@ $token = $tResponse.access_token
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Authorization", "Bearer "+$token)
 
-
-
 try {
     ## With the access token and HTTP header in hand, execute the API GET to see if the subject ip, 128.75.222.116, is malicious
     $aResponse = Invoke-RestMethod -Uri 'https://ti-api.hoplite.io/ip/128.75.222.116' -Method GET -Headers $headers -ContentType 'application/json' 
